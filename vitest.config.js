@@ -7,5 +7,6 @@ export default defineConfig({
     setupFiles: ['./tests/setup.js'],
     include: ['src/**/*.test.{js,jsx}', 'tests/**/*.test.{js,jsx}'],
     restoreMocks: true,
+    clearMocks: true,
   },
 })
