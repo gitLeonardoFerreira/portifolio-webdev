@@ -1,127 +1,90 @@
-<div align="center">
-  <a href="https://gitleonardoferreira.github.io/portifolio/">
-    <img src="public/og-image.png" alt="Céu azul com nuvem branca e o nome Leonardo Barbosa: Ideias no ar, código no mundo real" width="100%" />
-  </a>
-  <br />
-  <a href="https://gitleonardoferreira.github.io/portifolio/">Acessar o portfólio</a>
-  &nbsp;·&nbsp;
-  <a href="prompts.md">Ver os prompts do projeto</a>
-  &nbsp;·&nbsp;
-  <a href="https://github.com/gitLeonardoFerreira/portifolio/actions/workflows/pages.yml">
-    <img src="https://github.com/gitLeonardoFerreira/portifolio/actions/workflows/pages.yml/badge.svg" alt="Estado da publicação no GitHub Pages" />
-  </a>
-</div>
+# Leonardo Barbosa · Portfólio Webdev
 
-<br />
+Ideias no ar. Código no mundo real.
 
-<div align="center">
-  <img src="public/portraits/leonardo-bracos-cruzados.png" alt="Retrato de Leonardo Barbosa sorrindo, de braços cruzados" width="190" />
-  <h1>Oi, eu sou o Leonardo.</h1>
-  <p>Estudante de Engenharia de Software na FIAP, em São Paulo. Gosto de transformar problemas concretos em aplicações claras e úteis — de automações em Python a produtos web.</p>
-  <p>Este portfólio é um espaço para mostrar <strong>o que construí, como penso e o que estou aprendendo</strong>. Procuro uma oportunidade de estágio para continuar essa trajetória.</p>
-  <p><strong>React · JavaScript · Vite · Tailwind CSS</strong></p>
-</div>
+Adaptação do meu [portfólio original](https://github.com/gitLeonardoFerreira/portifolio) para a atividade de Web Development da FIAP. Mantém a navegação em voo, o céu e os retratos; acrescenta catálogo pela API GitHub, temas persistentes, contato com persistência e dashboard do dono.
 
-<div align="center">
-  <a href="#uma-viagem-pelo-céu">A experiência</a>
-  &nbsp;·&nbsp;
-  <a href="#projetos-em-destaque">Projetos</a>
-  &nbsp;·&nbsp;
-  <a href="#executar-localmente">Executar</a>
-  &nbsp;·&nbsp;
-  <a href="#processo-criativo">Processo criativo</a>
-</div>
+[Site publicado](https://portifolio-webdev-eight.vercel.app/) · [Repositório](https://github.com/gitLeonardoFerreira/portifolio-webdev) · [Roteiro do vídeo](docs/video-script.md) · [Matriz de requisitos](docs/requirements.md) · [Arquitetura e decisões](docs/architecture.md) · [Harness de IA](docs/ai-harness.md)
 
-## Uma viagem pelo céu
+## Estado da entrega
 
-A página inicial mantém o céu em cena enquanto a rolagem, o toque ou os controles inferiores conduzem o visitante por **nove paradas**. Os conteúdos se aproximam como se a câmera avançasse entre nuvens; cada projeto tem seu próprio momento de leitura. Quem prefere movimento reduzido recebe uma versão com rolagem vertical convencional.
+O frontend e a integração de backend estão implementados. **A ativação do Supabase e do Resend ficou para o dono configurar depois, por sua escolha.** Sem essas variáveis, o login aparece como “Área em preparação” e o endpoint de contato retorna 503 com alternativa de e-mail. Não há login fictício nem persistência de mensagens em localStorage.
 
-| Trecho da viagem | O que aparece                                                      |
-| ---------------- | ------------------------------------------------------------------ |
-| 01 · Abertura    | Apresentação de Leonardo e convite para explorar                   |
-| 02–04 · Projetos | Rastro, Smart File Organizer e Cálculo de Frete, um por cena       |
-| 05–07 · Sobre    | Retratos com troca de pose, história e trajetória                  |
-| 08–09 · Contato  | Convite à conversa e formulário que prepara a mensagem no WhatsApp |
+Para concluir esses requisitos na produção, siga [Configuração dos serviços](docs/setup.md), teste um contato real e o dashboard e registre a evidência. O vídeo ainda precisa ser gravado e publicado como não listado. Nenhuma nota de avaliação é garantida.
 
-Os estudos de caso têm páginas próprias, com leitura convencional e uma curta transição de entrada. O menu permite ir diretamente a uma seção; os controles da cena também funcionam no celular.
+## Executar
 
-## Projetos em destaque
-
-| Projeto                                                                                                  | O problema explorado                                                                  | Tecnologias                  | Estado                                     |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------ |
-| [Rastro](https://gitleonardoferreira.github.io/portifolio/#/projetos/rastro)                             | Acompanhar solicitações, responsáveis e confirmação da solução sem perder o histórico | React, FastAPI, PostgreSQL   | Versão local funcional; sem demo hospedada |
-| [Smart File Organizer](https://gitleonardoferreira.github.io/portifolio/#/projetos/smart-file-organizer) | Organizar arquivos com regras configuráveis e prévia antes de movê-los                | Python, CLI, YAML            | Código público                             |
-| [Cálculo de Frete](https://gitleonardoferreira.github.io/portifolio/#/projetos/calculo-de-frete)         | Conectar formulário, API e regra de cálculo em um projeto de aprendizado              | React, Express, Tailwind CSS | Em evolução; sem demo hospedada            |
-
-As páginas explicam o problema, a solução, decisões técnicas e aprendizados, com links para os respectivos repositórios. O site não atribui métricas ou demonstrações inexistentes aos projetos.
-
-## Executar localmente
-
-Use Node.js **20.19+ ou 22.12+** e npm:
+Node.js **22.12+**, npm e Git:
 
 ```bash
-git clone https://github.com/gitLeonardoFerreira/portifolio.git
-cd portifolio
+git clone https://github.com/gitLeonardoFerreira/portifolio-webdev.git
+cd portifolio-webdev
 npm ci
+cp .env.example .env.local
 npm run dev
 ```
 
-Abra o endereço mostrado pelo Vite. Para conferir a versão antes de publicar:
+As variáveis podem ficar ausentes para explorar o site público. Não use literalmente os placeholders do `.env.example`: remova-os ou substitua pelos valores reais. O Vite serve o frontend; a função `/api/contact` roda na Vercel. Para testar o fluxo completo localmente, use a CLI oficial com `npx vercel dev` após configurar as variáveis.
 
 ```bash
-npm run lint
-npm run format:check
-npm test
-npm run build
+npm run check       # lint, formatação, 28 testes e build
+npm run test:e2e    # 16 cenários em Chrome desktop e celular
+npm run perf        # Lighthouse mobile no build, falha se performance <80
 npm run preview
 ```
 
-<details>
-<summary><strong>Como o projeto está organizado</strong></summary>
+No Linux/CI, instale primeiro o Chromium dos testes: `npx playwright install --with-deps chromium`. No macOS os testes usam o Chrome instalado. Para medir performance, gere o build com `npm run build`; o comando `perf` abre uma prévia de produção isolada. Também aceita URL pública: `npm run perf -- https://URL-DO-SITE/ mobile-production`.
 
-| Caminho                                       | Responsabilidade                                      |
-| --------------------------------------------- | ----------------------------------------------------- |
-| `src/App.jsx`                                 | Cenas do voo, navegação, estudos de caso e formulário |
-| `src/flight.css`                              | Movimento e composição da experiência de voo          |
-| `src/styles.css` e `src/styles-sky.css`       | Estilos da interface e da identidade de céu           |
-| `src/data/projects.js`                        | Conteúdo dos três projetos                            |
-| `src/data/portraits.js` e `public/portraits/` | Ordem, legendas e fotos das poses                     |
-| `src/lib/contact.js`                          | Validação e montagem da mensagem para o WhatsApp      |
-| `public/Leonardo_Barbosa_Curriculo.pdf`       | Currículo disponível para download                    |
-| [`prompts.md`](prompts.md)                    | Prompts relevantes usados no desenvolvimento          |
+## Tecnologias
 
-O formulário abre o WhatsApp com a conversa preenchida para que a pessoa revise e envie a mensagem. Ele não envia dados silenciosamente em segundo plano.
+React 19, Vite 7, React Router, TanStack Query, CSS e Tailwind herdados, Supabase Auth/PostgreSQL/RLS, função Vercel e Resend. Vitest e Testing Library verificam regras e componentes; Playwright verifica navegação e comportamento em dois tamanhos.
 
-</details>
+## Estrutura
 
-<details>
-<summary><strong>Publicação e acessibilidade</strong></summary>
-
-O workflow [Publicar prévia no GitHub Pages](.github/workflows/pages.yml) valida o código e publica automaticamente a branch `main`. O build usa a base `/portifolio/` e `HashRouter`, permitindo abrir os estudos de caso diretamente no GitHub Pages:
-
-```bash
-GITHUB_PAGES=true npm run build
-GITHUB_PAGES=true npm run preview
+```text
+src/
+  components/        # apresentação e controles reutilizáveis
+    auth/            # verificação e proteção de rota
+    dashboard/       # mensagens e editor de destaques
+    home/            # voo e conteúdo autoral preservados
+    projects/        # cards, diagramas e metadados
+  pages/             # rotas públicas e privadas
+  hooks/             # cache de projetos e estado do formulário
+  services/          # chamadas HTTP e operações Supabase
+  context/           # sessão e preferências do visitante
+  data/              # textos autorais e referências das fotos
+shared/              # validação usada no cliente e no servidor
+api/                 # entrada HTTP da função Vercel
+server/              # orquestração de persistência e e-mail
+supabase/migrations/ # schema, permissões e rate limiting
+tests/             # unidade e integração
+e2e/                 # testes em navegador
+scripts/             # otimização de imagens e orçamento Lighthouse
+docs/                # decisões, roteiro, configuração e evidências
 ```
 
-O projeto também está preparado para a Vercel: fora do GitHub Pages, usa `BrowserRouter`, com redirecionamento de rotas em `vercel.json`.
+`src/data/projects.js` contém somente narrativa complementar dos três estudos existentes. A lista de projetos é criada exclusivamente a partir da API do GitHub; adicionar um repositório público original e não arquivado o inclui automaticamente. Forks e repositórios arquivados são filtrados. A API é paginada em lotes de 100, com limite defensivo de 10 páginas. Os três destaques padrão priorizam estudos com narrativa; o dono pode substituir a seleção pelo dashboard.
 
-A experiência oferece navegação por teclado, foco visível, rótulos para controles, alternativas para interações por toque e uma versão estável para `prefers-reduced-motion`.
+## Padrões de código e Git
 
-</details>
+Componentes em PascalCase, hooks `useNome`, serviços camelCase. Apresentação em JSX, HTTP em `services`, regra compartilhada em `shared`, código privilegiado em `api`/`server`. CSS preserva a identidade do projeto; tokens e decisões estão em [DESIGN.md](DESIGN.md).
 
-## Processo criativo
+GitHub Flow com `feature/<nome>` e `fix/<nome>`. Cada funcionalidade nasce em branch própria, passa pelos checks e entra na `main` com merge `--no-ff`, preservando o contexto de integração. Conventional Commits em português: `feat:`, `fix:`, `docs:`, `test:`, `chore:`. O hook pre-commit aplica ESLint e Prettier aos arquivos alterados; commit-msg verifica a mensagem com commitlint. O CI verifica o projeto completo e os testes de navegador. Instruções equivalentes para IA: [AGENTS.md](AGENTS.md).
 
-O projeto evoluiu por iterações: um primeiro briefing editorial, a mudança para um céu azul-claro com fotos na seção Sobre e, por fim, a navegação em voo que continua até o contato. Os pedidos usados nesse processo estão reunidos em [`prompts.md`](prompts.md).
+O histórico anterior foi preservado com os commits e autores originais, que antecedem esta padronização. As novas alterações seguem o padrão acima e usam suas datas reais. A adaptação foi feita nesta sessão; não simula commits distribuídos por dias anteriores.
 
----
+## Publicação
 
-<div align="center">
-  <strong>Ideias no ar. Código no mundo real.</strong>
-  <br />
-  <a href="https://gitleonardoferreira.github.io/portifolio/">Portfólio</a>
-  &nbsp;·&nbsp;
-  <a href="https://www.linkedin.com/in/leonardo-barbosa-102615-">LinkedIn</a>
-  &nbsp;·&nbsp;
-  <a href="mailto:leomurilobarbosa@gmail.com">E-mail</a>
-</div>
+Importe este repositório na Vercel como Vite, raiz `./`, comando `npm run build`, saída `dist`, branch de produção `main`. A integração GitHub publica novos pushes e gera previews das branches. `vercel.json` deixa `/api/*` para as funções e reescreve as rotas do SPA para `index.html`; por isso `/projetos/rastro` abre e atualiza diretamente.
+
+## Evidências e limites
+
+A medição na **URL pública** marcou **97 em performance mobile, 100 em acessibilidade, 100 em boas práticas e 100 em SEO**, com CLS de aproximadamente 0,00008. [Relatório Lighthouse de produção](docs/evidence/lighthouse-mobile-production.report.html). A medição local anterior de 96 também foi preservada. Esses resultados valem para os ambientes medidos; repita após ativar os serviços. Resultados e pendências: [Validação](docs/validation.md).
+
+Fotos WebP entre 57 e 71 KiB substituem os PNGs de aproximadamente 1,8 MiB na interface. Dashboard, autenticação e motor do voo são carregados sob demanda. Cache de 15 minutos evita nova consulta GitHub em navegação interna. Os diagramas dos projetos são ilustrações de fluxo, não capturas de sistemas publicados.
+
+## Segurança e dados
+
+`.env*` e `.vercel` ficam fora do Git; `.env.example` declara o contrato. Somente URL e chave pública Supabase vão para o navegador. Chave service-role e Resend ficam no servidor. RLS limita mensagens ao UUID do dono, com permissão de alteração somente de `responded_at`; visitantes leem apenas os destaques. O endpoint valida campos, limita corpo, aplica rate limiting persistente e usa idempotência no banco e no provedor de e-mail. Não registra conteúdo das mensagens nos logs.
+
+Mensagens não são apagadas automaticamente. Como dono, defina e aplique uma política de retenção adequada ao uso real e atenda pedidos de exclusão pelo painel Supabase. A lista do dashboard mostra as 100 mensagens mais recentes; todas permanecem no banco.

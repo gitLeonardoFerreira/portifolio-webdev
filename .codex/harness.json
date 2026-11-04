@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Inventário documental; não é configuração executável de MCP",
+  "tool": "Codex desktop",
+  "modelFamily": "GPT-6",
+  "exactModelId": "not exposed by session; verify selector before recording",
+  "skill": {
+    "name": "impeccable",
+    "version": "4.3.1",
+    "mode": "existing-world refinement, code-first",
+    "engine": "unavailable; references read directly"
+  },
+  "toolsUsed": ["terminal/Git", "GitHub connector", "Chrome via CUA"],
+  "qualityGates": [
+    "ESLint",
+    "Prettier",
+    "commitlint",
+    "Vitest",
+    "Testing Library",
+    "Playwright",
+    "Lighthouse"
+  ],
+  "instructions": "AGENTS.md",
+  "secrets": "Environment variables only; no credentials in this manifest"
+}
