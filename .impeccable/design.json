@@ -1,16 +1,465 @@
 {
-  "version": 1,
-  "source": "existing-portfolio",
-  "colors": {
-    "sky": "#c8ebff",
-    "ink": "#17344d",
-    "action": "#1856bc",
-    "paper": "#f6fcff",
-    "sun": "#ffe28a"
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-04T00:45:38.193948+00:00",
+  "title": "Design System: Portfólio de Leonardo Barbosa",
+  "extensions": {
+    "sourceFiles": [
+      "src/main.jsx",
+      "src/styles.css",
+      "src/styles-sky.css",
+      "src/flight.css",
+      "src/enhancements.css"
+    ],
+    "extractionScope": "Extração estática de estilos; não representa QA em navegador.",
+    "colorMeta": {
+      "sky": {
+        "role": "neutral",
+        "displayName": "Sky",
+        "tonalRamp": [
+          "oklch(15.0% 0.0457 233.0)",
+          "oklch(26.4% 0.0457 233.0)",
+          "oklch(37.9% 0.0457 233.0)",
+          "oklch(49.3% 0.0457 233.0)",
+          "oklch(60.7% 0.0457 233.0)",
+          "oklch(72.1% 0.0457 233.0)",
+          "oklch(83.6% 0.0457 233.0)",
+          "oklch(95.0% 0.0457 233.0)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15.0% 0.0570 246.8)",
+          "oklch(26.4% 0.0570 246.8)",
+          "oklch(37.9% 0.0570 246.8)",
+          "oklch(49.3% 0.0570 246.8)",
+          "oklch(60.7% 0.0570 246.8)",
+          "oklch(72.1% 0.0570 246.8)",
+          "oklch(83.6% 0.0570 246.8)",
+          "oklch(95.0% 0.0570 246.8)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(15.0% 0.0517 240.4)",
+          "oklch(26.4% 0.0517 240.4)",
+          "oklch(37.9% 0.0517 240.4)",
+          "oklch(49.3% 0.0517 240.4)",
+          "oklch(60.7% 0.0517 240.4)",
+          "oklch(72.1% 0.0517 240.4)",
+          "oklch(83.6% 0.0517 240.4)",
+          "oklch(95.0% 0.0517 240.4)"
+        ]
+      },
+      "action": {
+        "role": "primary",
+        "displayName": "Action",
+        "tonalRamp": [
+          "oklch(15.0% 0.1725 260.3)",
+          "oklch(26.4% 0.1725 260.3)",
+          "oklch(37.9% 0.1725 260.3)",
+          "oklch(49.3% 0.1725 260.3)",
+          "oklch(60.7% 0.1725 260.3)",
+          "oklch(72.1% 0.1725 260.3)",
+          "oklch(83.6% 0.1725 260.3)",
+          "oklch(95.0% 0.1725 260.3)"
+        ]
+      },
+      "action-hover": {
+        "role": "primary",
+        "displayName": "Action hover",
+        "tonalRamp": [
+          "oklch(15.0% 0.1846 258.5)",
+          "oklch(26.4% 0.1846 258.5)",
+          "oklch(37.9% 0.1846 258.5)",
+          "oklch(49.3% 0.1846 258.5)",
+          "oklch(60.7% 0.1846 258.5)",
+          "oklch(72.1% 0.1846 258.5)",
+          "oklch(83.6% 0.1846 258.5)",
+          "oklch(95.0% 0.1846 258.5)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "tonalRamp": [
+          "oklch(15.0% 0.0075 228.9)",
+          "oklch(26.4% 0.0075 228.9)",
+          "oklch(37.9% 0.0075 228.9)",
+          "oklch(49.3% 0.0075 228.9)",
+          "oklch(60.7% 0.0075 228.9)",
+          "oklch(72.1% 0.0075 228.9)",
+          "oklch(83.6% 0.0075 228.9)",
+          "oklch(95.0% 0.0075 228.9)"
+        ]
+      },
+      "surface-alt": {
+        "role": "neutral",
+        "displayName": "Surface alt",
+        "tonalRamp": [
+          "oklch(15.0% 0.0200 238.7)",
+          "oklch(26.4% 0.0200 238.7)",
+          "oklch(37.9% 0.0200 238.7)",
+          "oklch(49.3% 0.0200 238.7)",
+          "oklch(60.7% 0.0200 238.7)",
+          "oklch(72.1% 0.0200 238.7)",
+          "oklch(83.6% 0.0200 238.7)",
+          "oklch(95.0% 0.0200 238.7)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "tonalRamp": [
+          "oklch(15.0% 0.0415 239.1)",
+          "oklch(26.4% 0.0415 239.1)",
+          "oklch(37.9% 0.0415 239.1)",
+          "oklch(49.3% 0.0415 239.1)",
+          "oklch(60.7% 0.0415 239.1)",
+          "oklch(72.1% 0.0415 239.1)",
+          "oklch(83.6% 0.0415 239.1)",
+          "oklch(95.0% 0.0415 239.1)"
+        ]
+      },
+      "sun": {
+        "role": "secondary",
+        "displayName": "Sun",
+        "tonalRamp": [
+          "oklch(15.0% 0.1123 91.8)",
+          "oklch(26.4% 0.1123 91.8)",
+          "oklch(37.9% 0.1123 91.8)",
+          "oklch(49.3% 0.1123 91.8)",
+          "oklch(60.7% 0.1123 91.8)",
+          "oklch(72.1% 0.1123 91.8)",
+          "oklch(83.6% 0.1123 91.8)",
+          "oklch(95.0% 0.1123 91.8)"
+        ]
+      },
+      "warm-paper": {
+        "role": "neutral",
+        "displayName": "Warm paper",
+        "tonalRamp": [
+          "oklch(15.0% 0.0107 95.2)",
+          "oklch(26.4% 0.0107 95.2)",
+          "oklch(37.9% 0.0107 95.2)",
+          "oklch(49.3% 0.0107 95.2)",
+          "oklch(60.7% 0.0107 95.2)",
+          "oklch(72.1% 0.0107 95.2)",
+          "oklch(83.6% 0.0107 95.2)",
+          "oklch(95.0% 0.0107 95.2)"
+        ]
+      },
+      "dark-bg": {
+        "role": "neutral",
+        "displayName": "Dark bg",
+        "tonalRamp": [
+          "oklch(15.0% 0.0460 251.4)",
+          "oklch(26.4% 0.0460 251.4)",
+          "oklch(37.9% 0.0460 251.4)",
+          "oklch(49.3% 0.0460 251.4)",
+          "oklch(60.7% 0.0460 251.4)",
+          "oklch(72.1% 0.0460 251.4)",
+          "oklch(83.6% 0.0460 251.4)",
+          "oklch(95.0% 0.0460 251.4)"
+        ]
+      },
+      "dark-surface": {
+        "role": "neutral",
+        "displayName": "Dark surface",
+        "tonalRamp": [
+          "oklch(15.0% 0.0579 249.6)",
+          "oklch(26.4% 0.0579 249.6)",
+          "oklch(37.9% 0.0579 249.6)",
+          "oklch(49.3% 0.0579 249.6)",
+          "oklch(60.7% 0.0579 249.6)",
+          "oklch(72.1% 0.0579 249.6)",
+          "oklch(83.6% 0.0579 249.6)",
+          "oklch(95.0% 0.0579 249.6)"
+        ]
+      },
+      "dark-ink": {
+        "role": "neutral",
+        "displayName": "Dark ink",
+        "tonalRamp": [
+          "oklch(15.0% 0.0185 243.0)",
+          "oklch(26.4% 0.0185 243.0)",
+          "oklch(37.9% 0.0185 243.0)",
+          "oklch(49.3% 0.0185 243.0)",
+          "oklch(60.7% 0.0185 243.0)",
+          "oklch(72.1% 0.0185 243.0)",
+          "oklch(83.6% 0.0185 243.0)",
+          "oklch(95.0% 0.0185 243.0)"
+        ]
+      },
+      "dark-muted": {
+        "role": "neutral",
+        "displayName": "Dark muted",
+        "tonalRamp": [
+          "oklch(15.0% 0.0369 239.2)",
+          "oklch(26.4% 0.0369 239.2)",
+          "oklch(37.9% 0.0369 239.2)",
+          "oklch(49.3% 0.0369 239.2)",
+          "oklch(60.7% 0.0369 239.2)",
+          "oklch(72.1% 0.0369 239.2)",
+          "oklch(83.6% 0.0369 239.2)",
+          "oklch(95.0% 0.0369 239.2)"
+        ]
+      },
+      "dark-action": {
+        "role": "primary",
+        "displayName": "Dark action",
+        "tonalRamp": [
+          "oklch(15.0% 0.0907 252.9)",
+          "oklch(26.4% 0.0907 252.9)",
+          "oklch(37.9% 0.0907 252.9)",
+          "oklch(49.3% 0.0907 252.9)",
+          "oklch(60.7% 0.0907 252.9)",
+          "oklch(72.1% 0.0907 252.9)",
+          "oklch(83.6% 0.0907 252.9)",
+          "oklch(95.0% 0.0907 252.9)"
+        ]
+      },
+      "dark-action-hover": {
+        "role": "primary",
+        "displayName": "Dark action hover",
+        "tonalRamp": [
+          "oklch(15.0% 0.0587 251.6)",
+          "oklch(26.4% 0.0587 251.6)",
+          "oklch(37.9% 0.0587 251.6)",
+          "oklch(49.3% 0.0587 251.6)",
+          "oklch(60.7% 0.0587 251.6)",
+          "oklch(72.1% 0.0587 251.6)",
+          "oklch(83.6% 0.0587 251.6)",
+          "oklch(95.0% 0.0587 251.6)"
+        ]
+      },
+      "dark-line": {
+        "role": "neutral",
+        "displayName": "Dark line",
+        "tonalRamp": [
+          "oklch(15.0% 0.0560 246.4)",
+          "oklch(26.4% 0.0560 246.4)",
+          "oklch(37.9% 0.0560 246.4)",
+          "oklch(49.3% 0.0560 246.4)",
+          "oklch(60.7% 0.0560 246.4)",
+          "oklch(72.1% 0.0560 246.4)",
+          "oklch(83.6% 0.0560 246.4)",
+          "oklch(95.0% 0.0560 246.4)"
+        ]
+      }
+    },
+    "tonalRampNote": "Rampas OKLCH sintetizadas para prévia do painel; não são tokens usados pela aplicação e podem exceder o gamut sRGB.",
+    "typographyMeta": {
+      "display": {
+        "displayName": "Abertura",
+        "purpose": "Título da home; escala móvel específica."
+      },
+      "headline": {
+        "displayName": "Página",
+        "purpose": "Título de páginas de leitura."
+      },
+      "body": {
+        "displayName": "Texto",
+        "purpose": "Descrição da abertura e texto de leitura."
+      },
+      "navigation": {
+        "displayName": "Navegação",
+        "purpose": "Links do cabeçalho."
+      },
+      "label": {
+        "displayName": "Dados",
+        "purpose": "Metadados e instrumentos monoespaçados."
+      }
+    },
+    "shadows": [
+      {
+        "name": "surface",
+        "value": "0 8px 24px #17344d0d",
+        "purpose": "Controles, formulário e cartões; src/enhancements.css."
+      },
+      {
+        "name": "button-hover",
+        "value": "0 8px 20px #17344d16",
+        "purpose": "Botões apontados; src/enhancements.css."
+      },
+      {
+        "name": "cloud",
+        "value": "drop-shadow(0 12px 12px #17344d1a)",
+        "purpose": "Nuvem de abertura; src/enhancements.css."
+      },
+      {
+        "name": "sun",
+        "value": "0 8px 18px #17344d22",
+        "purpose": "Sol; src/enhancements.css."
+      },
+      {
+        "name": "project-link-hover-inherited",
+        "value": "5px 7px 0 #17344d",
+        "purpose": "Hover herdado de src/styles-sky.css, preservado nesta extração."
+      }
+    ],
+    "motion": [
+      {
+        "name": "button-state",
+        "value": "transform .25s, background .25s, box-shadow .25s",
+        "purpose": "Botões compartilhados; hover refinado em translateY(-2px)."
+      },
+      {
+        "name": "card-state",
+        "value": "border-color .35s, transform .4s, box-shadow .4s",
+        "purpose": "Link de cartão; hover translateY(-4px)."
+      },
+      {
+        "name": "cloud-bob",
+        "value": "5s ease-in-out infinite; translateY(-9px) em 50%",
+        "purpose": "Nuvem de abertura em src/styles-sky.css."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important",
+        "purpose": "Regra global em src/enhancements.css; CSS de céu também remove transformações de conteúdo."
+      },
+      {
+        "name": "navigation-state",
+        "value": "transition: none",
+        "purpose": "Evita transição de cor entre estados de navegação; src/enhancements.css."
+      }
+    ],
+    "focus": [
+      {
+        "name": "global",
+        "css": ":focus-visible { outline: 3px solid var(--action); outline-offset: 4px; }",
+        "source": "src/enhancements.css"
+      },
+      {
+        "name": "contact-focus-inherited",
+        "css": ".contact-form input:focus, .contact-form textarea:focus { border-color: #137c8b; box-shadow: 0 0 0 3px rgba(19,124,139,.14); }",
+        "source": "src/styles.css",
+        "note": "Regra mais específica que persiste junto ao contorno global; não foi normalizada nesta documentação."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow",
+        "value": "480px"
+      },
+      {
+        "name": "mobile",
+        "value": "760px"
+      },
+      {
+        "name": "header-cta",
+        "value": "1000px"
+      },
+      {
+        "name": "compact-desktop",
+        "value": "1100px"
+      },
+      {
+        "name": "short-scene",
+        "value": "720px",
+        "axis": "height"
+      }
+    ],
+    "responsiveRules": [
+      {
+        "query": "(max-width: 760px)",
+        "behavior": "Menu em coluna, catálogo e contato com uma coluna, filtros empilhados, dashboard com uma coluna, cabeçalho de 68px e título da home menor."
+      },
+      {
+        "query": "(max-width: 1000px)",
+        "behavior": "Oculta CTA do cabeçalho."
+      },
+      {
+        "query": "(max-height: 720px)",
+        "behavior": "Ajustes herdados de dimensões internas das cenas; regras distintas acima e abaixo de 760px."
+      }
+    ],
+    "componentPreviewNote": "Prévias extraídas dos padrões reais, sem runtime React. Variantes diurnas de botão, navegação, tag e cartão usam cores locais herdadas; campo usa custom properties com fallback. Não reproduzem a cena completa nem verificam estados funcionais."
   },
-  "typography": {
-    "display": "Barlow Condensed",
-    "body": "DM Sans",
-    "data": "IBM Plex Mono"
+  "components": [
+    {
+      "name": "Botão primário",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ação principal diurna; a aplicação possui variante noturna.",
+      "html": "<button class=\"ds-primary\">Ver projetos</button>",
+      "css": ".ds-primary{display:inline-flex;justify-content:center;align-items:center;gap:1.4rem;min-height:54px;border-radius:999px;padding:.85rem 1.35rem;font:700 .88rem/1.3 \"DM Sans Variable\",sans-serif;cursor:pointer;transition:transform .25s,background .25s,box-shadow .25s;box-shadow:0 8px 24px #17344d0d;background:#1856bc;color:white;border:2px solid #17344d}.ds-primary:hover{background:#2774e3;transform:translateY(-2px);box-shadow:0 8px 20px #17344d16}.ds-primary:disabled{opacity:.65;cursor:not-allowed}.ds-primary:focus-visible,.ds-outline:focus-visible,.ds-input:focus-visible,.ds-nav a:focus-visible,.ds-card:focus-visible{outline:3px solid var(--action,#1856bc);outline-offset:4px}"
+    },
+    {
+      "name": "Botão secundário",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Ação complementar em cápsula.",
+      "html": "<button class=\"ds-outline\">Entrar em contato</button>",
+      "css": ".ds-outline{display:inline-flex;justify-content:center;align-items:center;gap:1.4rem;min-height:54px;border-radius:999px;padding:.85rem 1.35rem;font:700 .88rem/1.3 \"DM Sans Variable\",sans-serif;cursor:pointer;transition:transform .25s,background .25s,box-shadow .25s;box-shadow:0 8px 24px #17344d0d;background:white;color:#17344d;border:2px solid #17344d}.ds-outline:hover{transform:translateY(-2px);box-shadow:0 8px 20px #17344d16}.ds-primary:focus-visible,.ds-outline:focus-visible,.ds-input:focus-visible,.ds-nav a:focus-visible,.ds-card:focus-visible{outline:3px solid var(--action,#1856bc);outline-offset:4px}"
+    },
+    {
+      "name": "Filtro de projetos",
+      "kind": "input",
+      "refersTo": "filter-input",
+      "description": "Campo de busca com papéis de tema.",
+      "html": "<label class=\"ds-label\" for=\"ds-search\">Buscar projetos</label><input class=\"ds-input\" id=\"ds-search\" placeholder=\"Nome do repositório\">",
+      "css": ".ds-label{display:block;font:600 .875rem \"DM Sans Variable\",sans-serif;margin:1rem 0 .5rem;color:var(--ink,#17344d)}.ds-input{width:100%;min-height:48px;padding:.75rem 1rem;border:1px solid var(--line,#a8c4d8);border-radius:8px;color:var(--ink,#17344d);background:var(--surface,#f6fcff);font:1rem \"DM Sans Variable\",sans-serif;caret-color:var(--action,#1856bc)}.ds-primary:focus-visible,.ds-outline:focus-visible,.ds-input:focus-visible,.ds-nav a:focus-visible,.ds-card:focus-visible{outline:3px solid var(--action,#1856bc);outline-offset:4px}"
+    },
+    {
+      "name": "Navegação",
+      "kind": "nav",
+      "description": "Links do cabeçalho em estado diurno; ativo tem traço inferior.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Principal\"><a class=\"ds-active\" aria-current=\"page\" href=\"#projetos\">Projetos</a><a href=\"#sobre\">Sobre</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:clamp(1.1rem,2.5vw,2.7rem);padding:1rem 0 2rem}.ds-nav a{position:relative;color:#49687f;font:600 .82rem \"DM Sans Variable\",sans-serif;text-decoration:none;transition:none}.ds-nav a:hover,.ds-nav .ds-active{color:#17344d}.ds-nav .ds-active:after{content:\"\";position:absolute;left:0;right:0;height:2px;bottom:-29px;background:#2668c9}.ds-primary:focus-visible,.ds-outline:focus-visible,.ds-input:focus-visible,.ds-nav a:focus-visible,.ds-card:focus-visible{outline:3px solid var(--action,#1856bc);outline-offset:4px}"
+    },
+    {
+      "name": "Tag de tecnologia",
+      "kind": "chip",
+      "description": "Metadado de projeto; não é filtro selecionável.",
+      "html": "<span class=\"ds-tag\">React</span>",
+      "css": ".ds-tag{display:inline-block;padding:.46rem .75rem;border-radius:999px;border:1px solid #9bb9c7;background:rgba(255,255,255,.66);color:#17344d;font:400 .68rem/1.2 \"IBM Plex Mono\",monospace}"
+    },
+    {
+      "name": "Cartão de projeto",
+      "kind": "card",
+      "refersTo": "project-card",
+      "description": "Trecho de leitura do cartão de catálogo, com hover herdado do link.",
+      "html": "<a class=\"ds-card\" href=\"#projeto\"><span class=\"ds-meta\">PROJETO / REACT</span><h3>Projeto autoral</h3><p>Decisões e implementação do projeto.</p><span class=\"ds-card-link\">Ver estudo de caso →</span></a>",
+      "css": ".ds-card{display:flex;flex-direction:column;gap:1rem;padding:clamp(1.7rem,4vw,3.5rem);border-radius:24px;background:#fffdf5;border:2px solid #17344d;color:#17344d;text-decoration:none;box-shadow:0 8px 24px #17344d0d;transition:border-color .35s,transform .4s,box-shadow .4s}.ds-card:hover{transform:translateY(-4px);box-shadow:5px 7px 0 #17344d}.ds-card h3{margin:0;font:700 clamp(2.4rem,5vw,4rem)/.88 \"Barlow Condensed\",sans-serif;letter-spacing:-.035em;text-transform:uppercase;overflow-wrap:anywhere}.ds-card p{margin:0;color:#42647a;font:1.05rem/1.55 \"DM Sans Variable\",sans-serif}.ds-meta{font:.7rem/1.5 \"IBM Plex Mono\",monospace;letter-spacing:.12em;color:#42647a}.ds-card-link{font:600 .88rem \"DM Sans Variable\",sans-serif}.ds-primary:focus-visible,.ds-outline:focus-visible,.ds-input:focus-visible,.ds-nav a:focus-visible,.ds-card:focus-visible{outline:3px solid var(--action,#1856bc);outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Ideias no ar. Código no mundo real",
+    "overview": "O céu e o voo são a identidade confirmada do portfólio: nuvens geométricas, sol amarelo, logotipo “léo” e retratos reais. A tipografia condensada dá presença aos títulos; texto simples e dados monoespaçados mantêm o conteúdo autoral legível. O tema noturno transporta essa identidade para superfícies azuis profundas.\n\nEste registro consolida o código existente, sem estabelecer uma nova identidade. A implementação visual é a referência: `src/main.jsx` carrega `src/styles.css`, `src/styles-sky.css`, `src/flight.css` e, por último, `src/enhancements.css`. Os tokens acima representam os papéis reutilizados; cenas ilustradas conservam gradientes e cores locais. Movimento, foco e regras responsivas complementares estão em `.impeccable/design.json`.",
+    "keyCharacteristics": [
+      "Céu ilustrado e retratos autorais preservados.",
+      "Títulos condensados, texto confortável e metadados monoespaçados.",
+      "Ações azuis e superfícies claras ou azuis profundas conforme o tema.",
+      "Navegação em voo com alternativa de leitura convencional."
+    ],
+    "rules": [
+      {
+        "name": "The Theme Role Rule",
+        "body": "Novos controles devem usar `--surface`, `--ink`, `--muted`, `--action` e `--line`, que mudam junto com o tema. As cores fixas da ilustração não são tokens de controles.",
+        "section": "colors"
+      },
+      {
+        "name": "The Authored Title Rule",
+        "body": "Títulos devem acomodar o conteúdo autoral com quebra equilibrada; nomes de repositórios e títulos de cartões permitem quebra de palavras longas.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "**Do** preservar céu, nuvens, logotipo “léo”, retratos reais e a frase autoral confirmada.",
+      "**Do** usar os papéis de tema nos novos controles e conteúdos de leitura.",
+      "**Do** manter foco visível, mensagens de erro textuais e conteúdo acessível sem animação de revelação.",
+      "**Do** usar a tipografia condensada nos títulos e reservar mono para dados e instrumentos."
+    ],
+    "donts": [
+      "**Don't** substituir a identidade de céu e voo por uma identidade genérica.",
+      "**Don't** fazer texto ou recuperação de falhas dependerem de animação.",
+      "**Don't** tratar cores locais de artes dos projetos como novos papéis globais.",
+      "**Don't** afirmar contraste, acessibilidade ou comportamento responsivo verificados apenas com esta extração de CSS."
+    ]
   }
 }
