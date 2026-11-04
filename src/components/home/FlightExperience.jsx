@@ -164,6 +164,12 @@ export default function FlightExperience() {
                   empty="Nenhum projeto em destaque. Explore o catálogo completo."
                 />
               )}
+              {query.settingsError && (
+                <p role="alert" className="settings-warning">
+                  A seleção de destaques não carregou. Exibindo projetos recentes.{' '}
+                  <button onClick={() => window.location.reload()}>Tentar novamente</button>
+                </p>
+              )}
               <Link className="catalog-link text-link" to="/projetos">
                 Ver todos os projetos
               </Link>

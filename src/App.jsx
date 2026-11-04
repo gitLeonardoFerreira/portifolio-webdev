@@ -31,6 +31,7 @@ export default function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/projetos" element={<ProjectsPage />} />
             <Route path="/projetos/:slug" element={<ProjectPage />} />
+            <Route path="/contato" element={<ContactPage />} />
             <Route
               path="/login"
               element={

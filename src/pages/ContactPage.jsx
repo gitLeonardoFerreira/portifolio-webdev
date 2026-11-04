@@ -8,7 +8,7 @@ export default function ContactPage() {
   return (
     <>
       <main className="contact-page">
-        <ContactSection />
+        <ContactSection heading="h1" />
       </main>
       <Footer />
     </>

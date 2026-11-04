@@ -1,4 +1,5 @@
 import { useEffect, useState, lazy, Suspense } from 'react'
+import { usePreferences } from '../context/PreferencesContext.js'
 import Hero from '../components/home/Hero.jsx'
 import { AboutSection, JourneySection } from '../components/home/ProfileSections.jsx'
 import ProjectsSection from '../components/projects/ProjectsSection.jsx'
@@ -6,6 +7,7 @@ import ContactSection from '../components/ContactSection.jsx'
 import Footer from '../components/Footer.jsx'
 const FlightExperience = lazy(() => import('../components/home/FlightExperience.jsx'))
 export default function HomePage() {
+  const { reading } = usePreferences()
   const [reducedMotion, setReducedMotion] = useState(
     () => window.matchMedia('(prefers-reduced-motion: reduce)').matches,
   )
@@ -21,7 +23,7 @@ export default function HomePage() {
     return () => media.removeEventListener('change', update)
   }, [])
 
-  if (!reducedMotion) {
+  if (!reducedMotion && !reading) {
     return (
       <main>
         <Suspense fallback={<Hero flight />}>

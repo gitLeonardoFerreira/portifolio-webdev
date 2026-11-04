@@ -8,6 +8,7 @@ export default function ProjectsSection() {
     <section id="projetos" className="projects-section section-anchor">
       <div className="site-container">
         <h2 className="page-heading">Projetos com propósito.</h2>
+        {query.settingsError && <p role="alert">{query.settingsError.message}</p>}
         <AsyncState query={query} empty="Ainda não há projetos públicos.">
           <div className="project-stack">
             {query.featured.map((project) => (

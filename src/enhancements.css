@@ -1,0 +1,785 @@
+/* Refinamentos sobre a identidade original de céu. */
+:root {
+  --surface: #f6fcff;
+  --surface-alt: #e7f5ff;
+  --ink: #17344d;
+  --muted: #36556b;
+  --action: #1856bc;
+  --line: #a8c4d8;
+  color-scheme: light;
+  scrollbar-color: #6096bd #e7f5ff;
+}
+:root[data-theme='dark'] {
+  --surface: #142f49;
+  --surface-alt: #0d2034;
+  --ink: #e9f5ff;
+  --muted: #b6cfe1;
+  --action: #9bc9ff;
+  --line: #46647f;
+  color-scheme: dark;
+  scrollbar-color: #789cb9 #0d2034;
+  color: var(--ink);
+  background: var(--surface-alt);
+}
+button,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+input,
+textarea,
+select {
+  caret-color: var(--action);
+}
+button,
+a {
+  touch-action: manipulation;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+:focus-visible {
+  outline: 3px solid var(--action);
+  outline-offset: 4px;
+}
+::selection {
+  background: #ffe28a;
+  color: #17344d;
+}
+.reveal,
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+.section-index {
+  display: none;
+}
+.hero-eyebrow {
+  display: none;
+}
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+.hero-title,
+.flight-scene-intro .hero-title {
+  font-size: clamp(4.3rem, 8vw, 6rem);
+  letter-spacing: -0.035em;
+}
+.hero-kicker {
+  letter-spacing: -0.03em;
+}
+.hero-cloud-link,
+.hero-cloud-message {
+  color: #17344d;
+}
+.hero-cloud-message small {
+  display: none;
+}
+.hero-cloud-message > span {
+  margin-top: 0.65rem;
+}
+.hero-cloud-shape {
+  filter: drop-shadow(0 12px 12px #17344d1a);
+}
+.hero-cloud-sun,
+.flight-sun {
+  box-shadow: 0 8px 18px #17344d22;
+}
+.header-cta,
+.button-primary,
+.button-outline,
+.flight-contact-next,
+.contact-form,
+.project-card,
+.case-hero .visual {
+  box-shadow: 0 8px 24px #17344d0d;
+}
+.header-cta:hover,
+.button-primary:hover,
+.button-outline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px #17344d16;
+}
+.header-inner.site-container {
+  gap: 1rem;
+}
+.visitor-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-left: auto;
+}
+.theme-toggle,
+.reading-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: transparent;
+  border-radius: 8px;
+}
+.theme-toggle {
+  width: 44px;
+  flex-shrink: 0;
+}
+.theme-toggle svg {
+  width: 21px;
+  height: 21px;
+}
+.reading-toggle {
+  padding: 0.4rem 0.7rem;
+  font-size: 0.78rem;
+}
+.main-nav {
+  position: static;
+  transform: none;
+  margin-left: auto;
+}
+.page-shell {
+  min-height: 70svh;
+  padding-top: clamp(3rem, 7vw, 6rem);
+  padding-bottom: 5rem;
+}
+.page-heading {
+  max-width: 900px;
+  margin: 0 0 1.3rem;
+  font: 700 clamp(3.5rem, 8vw, 6rem)/0.95 var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: -0.035em;
+}
+.page-intro {
+  max-width: 65ch;
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.project-filters {
+  display: flex;
+  gap: 1rem;
+  margin: 2.5rem 0;
+}
+.project-filters > div {
+  flex: 1;
+  max-width: 32rem;
+}
+.project-filters label,
+.auth-panel label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin: 1rem 0 0.5rem;
+}
+.project-filters input,
+.project-filters select,
+.auth-panel input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  background: var(--surface);
+  font: inherit;
+}
+.project-stack.catalog-stack {
+  margin-top: 3rem;
+  gap: 2rem;
+}
+.project-card h3 {
+  overflow-wrap: anywhere;
+}
+.catalog-stack .project-card h3 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+}
+.project-card .repository-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin-top: 0.7rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+.case-hero .repository-meta {
+  margin: 1.5rem 0;
+}
+.repository-meta span {
+  display: inline-block;
+}
+.project-card-link {
+  overflow: hidden;
+}
+.visual-repository {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2.5rem;
+  background: #d8ebf7;
+  color: #17344d;
+}
+.visual-repository strong {
+  font: 600 clamp(2rem, 4vw, 3.5rem)/1 var(--font-display);
+  overflow-wrap: anywhere;
+}
+.visual-repository > span {
+  font: 0.75rem var(--font-mono);
+}
+.catalog-link {
+  justify-self: center;
+  color: var(--action);
+  font-size: 0.9rem;
+}
+.state-panel {
+  padding: 2rem;
+  background: var(--surface);
+  border-radius: 12px;
+  color: var(--ink);
+  line-height: 1.6;
+}
+.state-panel h2 {
+  font: 600 clamp(1.5rem, 3vw, 2.1rem)/1.15 var(--font-body);
+  margin: 0 0 1rem;
+}
+.state-panel p {
+  max-width: 65ch;
+  color: var(--muted);
+}
+.project-skeleton {
+  min-height: 260px;
+  width: 100%;
+  padding: 2rem;
+  background: var(--surface);
+  border-radius: 12px;
+}
+.project-skeleton > span {
+  display: block;
+  height: 24px;
+  width: 70%;
+  background: var(--line);
+  margin: 1rem 0;
+  border-radius: 4px;
+  animation: skeleton-pulse 1.4s ease-in-out infinite alternate;
+}
+.project-skeleton > span:nth-child(2) {
+  width: 90%;
+  height: 60px;
+}
+.project-skeleton > p {
+  color: var(--muted);
+}
+@keyframes skeleton-pulse {
+  to {
+    opacity: 0.45;
+  }
+}
+.contact-page .contact-section {
+  padding-top: 4rem;
+}
+.contact-form {
+  border-radius: 12px;
+  color: var(--ink);
+}
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  border-radius: 6px;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+.contact-form input[aria-invalid='true'],
+.contact-form textarea[aria-invalid='true'] {
+  border-color: #b32c36;
+}
+.contact-form .field-error {
+  color: #a92231;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin: 0.35rem 0;
+}
+.field-error a {
+  text-decoration: underline;
+}
+.contact-form .form-note {
+  color: var(--muted);
+}
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.form-feedback h2 {
+  font: 600 2rem var(--font-body);
+}
+.form-feedback p {
+  line-height: 1.6;
+}
+.form-feedback button {
+  margin-top: 1rem;
+}
+.auth-panel {
+  max-width: 480px;
+  margin: 0 auto;
+}
+.auth-panel h1,
+.dashboard-heading h1 {
+  font: 700 clamp(2.5rem, 5vw, 4rem)/1 var(--font-display);
+  margin: 0 0 1rem;
+}
+.auth-panel p {
+  line-height: 1.6;
+  color: var(--muted);
+}
+.auth-panel form > button {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+.dashboard-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 1fr);
+  gap: 3rem;
+  margin-top: 3rem;
+}
+.dashboard-section h2 {
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+}
+.dashboard-section > p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+.message-list {
+  list-style: none;
+  padding: 0;
+}
+.message-list li {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--line);
+}
+.message-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+.message-heading h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+.message-heading span {
+  color: var(--action);
+  font-size: 0.8rem;
+}
+.message-list time {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  color: var(--muted);
+}
+.message-list a {
+  text-decoration: underline;
+}
+.message-body {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.7;
+}
+.dashboard-section fieldset {
+  padding: 0;
+  border: 0;
+  margin-bottom: 1.5rem;
+}
+.dashboard-section legend {
+  margin-bottom: 1rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.project-option {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  min-height: 48px;
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+.project-option input {
+  accent-color: var(--action);
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.flight-scene-inner {
+  overflow: auto;
+  scrollbar-width: thin;
+  padding: 0.4rem;
+}
+.flight-scene-project .project-card h3 {
+  font-size: clamp(2.6rem, 5.5vw, 4.5rem);
+}
+.flight-scene-project .project-card-copy {
+  min-height: 260px;
+}
+.flight-scene-project .repository-meta {
+  font-size: 0.7rem;
+}
+.flight-scene-contact-form .contact-form {
+  padding: 1.25rem 1.5rem;
+}
+.flight-scene-contact-form .contact-form .form-top {
+  padding: 0 0 0.6rem;
+  margin: 0;
+}
+.flight-scene-contact-form .contact-form label {
+  margin-top: 0.6rem;
+}
+.flight-scene-contact-form .contact-form input {
+  padding: 0.6rem 0.8rem;
+}
+.flight-scene-contact-form .form-note {
+  max-width: 60ch;
+}
+.flight-hud-controls button {
+  width: 44px;
+  height: 44px;
+}
+.settings-warning {
+  font-size: 0.85rem;
+  background: var(--surface);
+  padding: 0.6rem;
+}
+.settings-warning button {
+  text-decoration: underline;
+  background: none;
+  border: 0;
+  color: var(--action);
+}
+:root[data-theme='dark'] body {
+  color: var(--ink);
+  background: var(--surface-alt);
+}
+:root[data-theme='dark']
+  :is(
+    .site-header,
+    .site-footer,
+    .contact-section,
+    .about-section,
+    .journey-section,
+    .case-hero,
+    .case-next,
+    .projects-section,
+    .hero,
+    .contact-form,
+    .project-card-copy,
+    .flight-contact-next,
+    .journey-flow span
+  ) {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--line);
+}
+:root[data-theme='dark']
+  :is(
+    .hero-description,
+    .hero-kicker,
+    .main-nav a,
+    .project-card p,
+    .about-details p,
+    .journey-item p,
+    .journey-grid p,
+    .flight-story-body > p,
+    .flight-contact-intro > p,
+    .flight-project-heading p,
+    .footer-inner p,
+    .footer-base,
+    .contact-copy p,
+    .contact-email,
+    .flight-about-statement,
+    .case-heading p,
+    .case-story-row p,
+    .case-intro p,
+    .not-found p,
+    .flight-final-links,
+    .flight-final-links a
+  ) {
+  color: var(--muted);
+}
+:root[data-theme='dark']
+  :is(
+    .brand,
+    .main-nav a:hover,
+    .main-nav a.is-active,
+    .footer-brand,
+    .project-card h3,
+    .case-heading h1,
+    .journey-item h3,
+    .case-next a,
+    .about-facts strong,
+    .project-bottom,
+    .tag-row span,
+    .orbit-caption strong
+  ) {
+  color: var(--ink);
+}
+:root[data-theme='dark']
+  :is(.header-cta, .button-outline, .orbit-next, .flight-hud-controls button, .journey-flow span) {
+  color: var(--ink);
+  background: var(--surface);
+  border-color: var(--line);
+}
+:root[data-theme='dark'] .button-primary {
+  color: #0d2034;
+  background: #9bc9ff;
+  border-color: #9bc9ff;
+}
+:root[data-theme='dark'] .button-primary:hover {
+  background: #bddcff;
+}
+:root[data-theme='dark']
+  :is(
+    .text-link,
+    .case-story-row h2,
+    .contact-copy em,
+    .section-heading em,
+    .flight-scene h2 em,
+    .flight-about-statement em,
+    .about-statement em,
+    .hero-kicker em
+  ) {
+  color: var(--action);
+}
+:root[data-theme='dark'] .hero-title {
+  color: var(--ink);
+}
+:root[data-theme='dark'] .hero-title > span:nth-child(2) {
+  -webkit-text-stroke-color: var(--ink);
+}
+:root[data-theme='dark'] .flight-rail {
+  color: var(--ink);
+  background: #0d2034;
+}
+:root[data-theme='dark'] .flight-stage {
+  background: radial-gradient(circle at 50% 46%, #244b6b 0, #102a45 60%, #0d2034 100%);
+}
+:root[data-theme='dark'] .flight-horizon {
+  background: radial-gradient(circle, #46739133, transparent 65%);
+}
+:root[data-theme='dark'] .flight-hud {
+  color: var(--muted);
+}
+:root[data-theme='dark'] .flight-hud-track {
+  background: var(--line);
+}
+:root[data-theme='dark'] .flight-hud-track span {
+  background: var(--action);
+}
+:root[data-theme='dark'] .menu-toggle {
+  border-color: var(--line);
+}
+:root[data-theme='dark'] .menu-toggle span {
+  background: var(--ink);
+}
+:root[data-theme='dark'] .contact-form .field-error,
+:root[data-theme='dark'] .field-error {
+  color: #ffb9bc;
+}
+:root[data-theme='dark'] .main-nav.is-open {
+  background: var(--surface);
+}
+:root[data-theme='dark'] .case-note {
+  background: var(--surface-alt);
+}
+:root[data-theme='dark'] .hero-cloud-message {
+  color: #17344d;
+}
+@media (max-width: 1000px) {
+  .header-cta {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .header-inner.site-container {
+    gap: 0.65rem;
+    padding-inline: 1rem;
+  }
+  .brand {
+    margin-right: auto;
+  }
+  .visitor-controls {
+    order: 1;
+    margin-left: 0;
+  }
+  .menu-toggle {
+    order: 2;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .main-nav {
+    position: absolute;
+    transform: none;
+    margin: 0;
+  }
+  .reading-toggle {
+    font-size: 0.7rem;
+    padding: 0.4rem;
+  }
+  .hero-title,
+  .flight-scene-intro .hero-title {
+    font-size: clamp(3.8rem, 15vw, 5.5rem);
+  }
+  .hero-cloud-scene {
+    max-width: 280px;
+  }
+  .flight-scene-intro .hero-cloud-scene {
+    width: min(90%, 280px);
+  }
+  .flight-scene-intro .hero-cloud-message strong {
+    font-size: 2.7rem;
+  }
+  .project-filters {
+    flex-direction: column;
+    gap: 0;
+  }
+  .project-card .repository-meta {
+    font-size: 0.7rem;
+  }
+  .catalog-stack .visual {
+    min-height: 200px;
+  }
+  .catalog-stack .project-card-copy {
+    padding: 1.5rem;
+  }
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-heading {
+    align-items: flex-start;
+  }
+  .dashboard-heading > button {
+    min-width: 70px;
+  }
+  .contact-page .contact-section {
+    padding-top: 2rem;
+  }
+  .contact-email {
+    overflow-wrap: anywhere;
+  }
+  .flight-scene-project .project-card-copy {
+    min-height: 240px;
+  }
+  .flight-scene-project .visual {
+    min-height: 160px;
+  }
+  .flight-scene-project .project-number {
+    font-size: 0.55rem;
+  }
+  .flight-project-layout {
+    gap: 0.6rem;
+  }
+  .flight-scene-contact-form .contact-form {
+    padding: 1rem;
+  }
+  .flight-scene-contact-form .contact-form .field-error {
+    font-size: 0.7rem;
+  }
+  .flight-final-links {
+    font-size: 0.65rem;
+  }
+  .flight-hud-current {
+    max-width: 170px;
+  }
+  .page-shell {
+    padding-top: 2.5rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root[data-theme='dark'] .project-number {
+  color: var(--muted);
+}
+:root[data-theme='dark'] .tag-row span {
+  background: #244c6c;
+  color: #e9f5ff;
+  border-color: #46647f;
+}
+
+.contact-page .contact-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 6rem);
+  max-width: 1300px;
+}
+.contact-page .contact-copy {
+  text-align: left;
+}
+.contact-page .contact-copy h1 {
+  font: 700 clamp(3.3rem, 5.5vw, 5.5rem)/0.95 var(--font-display);
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  margin: 0 0 1.5rem;
+}
+.contact-page .contact-copy h1 em {
+  color: var(--action);
+  font-style: normal;
+}
+.contact-page .contact-copy > p {
+  margin-left: 0;
+}
+.contact-page .contact-email {
+  font-size: clamp(0.85rem, 1.3vw, 1rem);
+}
+.contact-page .contact-form-wrap {
+  width: 100%;
+}
+.contact-form .form-top {
+  color: var(--muted);
+}
+@media (max-width: 760px) {
+  .contact-page .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .contact-page .contact-copy h1 {
+    font-size: 3.4rem;
+  }
+}
