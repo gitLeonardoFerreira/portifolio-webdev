@@ -4,3 +4,9 @@ dist/
 *.local
 .env*
 !.env.example
+
+.vercel/
+coverage/
+playwright-report/
+test-results/
+.impeccable/review/
