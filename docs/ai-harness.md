@@ -38,7 +38,7 @@ O ambiente disponibiliza subagentes, mas o desenvolvimento das funcionalidades f
 4. Escrever testes de validação, rota protegida, persistência antes de envio, retry idempotente e estados de API.
 5. Verificar o navegador: um teste detectou uma rota de contato ausente; o código foi corrigido e os testes refeitos.
 6. Medir performance de verdade e registrar o relatório; não inferir a pontuação do tamanho do bundle.
-7. Declarar que Supabase/Resend ainda precisam de ativação porque o dono preferiu configurar depois.
+7. Registrar inicialmente a ativação pendente e, na continuação autorizada, configurar Supabase/Resend e verificar o fluxo real sem expor credenciais.
 
 ## Por que as instruções não bastam
 

@@ -10,3 +10,8 @@ coverage/
 playwright-report/
 test-results/
 .impeccable/review/
+
+# Capturas do teste real: distribuídas somente no pacote privado da entrega.
+docs/evidence/banco-permissoes-verificadas.jpg
+docs/evidence/dashboard-verificado.jpg
+docs/evidence/email-entregue.jpg

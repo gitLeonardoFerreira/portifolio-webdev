@@ -11,9 +11,13 @@
 - Lighthouse mobile na **URL pública**, após o deploy automático do commit `ad6c176`: performance **97**, acessibilidade **100**, boas práticas **100**, SEO **100**, CLS **0,0000761**. [HTML de produção](evidence/lighthouse-mobile-production.report.html) e JSON ao lado. A ativação futura dos serviços pede nova medição.
 - Publicação: GitHub registrou status Vercel `success`/“Deployment has completed” para o push de revisão. O acesso direto e refresh de `/projetos/rastro` foram conferidos na URL pública com os dados reais do GitHub. `/dashboard` redirecionou para `/login`. O endpoint `/api/contact` respondeu 405 a GET, com `Allow: POST`, sem enviar mensagens.
 
-## O que os testes não comprovam
+## Verificação real após ativação
 
-As chamadas externas nos testes são simuladas. Ainda é necessário configurar Supabase e Resend, executar a migration, cadastrar o dono, inserir as variáveis na Vercel e testar envio/entrega real, persistência, RLS e seleção de destaques. O usuário escolheu fazer essa ativação depois. Não há um dashboard fictício em produção.
+Supabase e Resend ativados, migration aplicada, dono cadastrado e nove variáveis de produção salvas na Vercel. O redeploy concluiu Ready. O teste real foi salvo e enviado; Resend registrou **Delivered**. Dashboard autenticado mostrou a mensagem; marcação como respondida permaneceu após refresh. Três destaques foram salvos no banco e recarregados no painel. Logout retornou ao login.
+
+Consulta de verificação: um teste salvo/enviado/respondido; RLS ativo nas quatro tabelas; SELECT de mensagens para anon negado; INSERT direto para authenticated negado; três destaques persistidos. A autorização de outra conta não allowlisted não foi testada com um segundo usuário real; as políticas SQL estão versionadas e o bloqueio sem sessão tem testes automatizados.
+
+Lighthouse mobile após ativação: **100 performance, 100 acessibilidade, 100 boas práticas, 100 SEO**, CLS **0,015179**, LCP **1.100 ms**. Relatórios `lighthouse-mobile-configured.report.html/json` e capturas de evidência estão em docs/evidence. Resultados valem para o ambiente medido.
 
 ## Publicação
 
@@ -25,8 +29,6 @@ As referências da skill Impeccable foram aplicadas diretamente; o engine local 
 
 ## Pendências da entrega acadêmica
 
-- Ativar Supabase/Resend e registrar evidência real de formulário, e-mail, dashboard e RLS.
-- Medir Lighthouse na versão pública final com os serviços configurados.
 - Gravar e publicar vídeo não listado com rosto e tela durante até oito minutos.
 - Entregar os três links na plataforma solicitada.
 - Confirmar com o avaliador a aceitação do histórico herdado do portfólio: as novas mudanças foram feitas nesta sessão com datas reais.

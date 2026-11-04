@@ -1,6 +1,6 @@
 # Ativar banco, login e e-mail
 
-Este procedimento ficou para o dono executar depois, conforme sua decisão. O site público funciona sem essas contas; contato persistente e administração só ficam operacionais ao concluir a configuração e o teste real abaixo. Não envie credenciais pelo chat nem as versione.
+A produção desta entrega já foi configurada e testada, conforme docs/activation.md. Este guia serve para reproduzir a instalação em outro ambiente. Não reexecute a migration inicial no banco já configurado. Não envie credenciais pelo chat nem as versione.
 
 URL publicada nesta entrega: [portifolio-webdev-eight.vercel.app](https://portifolio-webdev-eight.vercel.app/). Use essa origem em `SITE_URL`.
 

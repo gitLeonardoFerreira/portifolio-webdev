@@ -8,9 +8,9 @@ Adaptação do meu [portfólio original](https://github.com/gitLeonardoFerreira/
 
 ## Estado da entrega
 
-O frontend e a integração de backend estão implementados. **A ativação do Supabase e do Resend ficou para o dono configurar depois, por sua escolha.** Sem essas variáveis, o login aparece como “Área em preparação” e o endpoint de contato retorna 503 com alternativa de e-mail. Não há login fictício nem persistência de mensagens em localStorage.
+Frontend e backend estão publicados e configurados. Supabase Auth, banco com RLS e Resend foram ativados. O teste real confirmou mensagem salva, e-mail entregue pelo provedor, dashboard autenticado, marcação de resposta persistente e três destaques salvos. A saída da sessão retornou ao login.
 
-Para concluir esses requisitos na produção, siga [Configuração dos serviços](docs/setup.md), teste um contato real e o dashboard e registre a evidência. O vídeo ainda precisa ser gravado e publicado como não listado. Nenhuma nota de avaliação é garantida.
+A medição após ativação marcou **100 em performance mobile, acessibilidade, boas práticas e SEO**, com CLS 0,0152. Consulte [ativação e evidências reais](docs/activation.md) e [relatório final](docs/evidence/lighthouse-mobile-configured.report.html). Os resultados são do ambiente medido, não garantia de nota. O vídeo será gravado e publicado pelo aluno conforme o roteiro existente.
 
 ## Executar
 
