@@ -53,5 +53,15 @@ export function useContactForm() {
       setPending(false)
     }
   }
-  return { values, errors, pending, result, failure, change, blur, submit }
+  return {
+    values,
+    errors,
+    pending,
+    result,
+    failure,
+    change,
+    blur,
+    submit,
+    reset: () => setResult(null),
+  }
 }

@@ -4,7 +4,7 @@ export async function fetchFeatured({ signal } = {}) {
   if (!url || !key) return null
   const response = await fetch(`${url}/rest/v1/site_settings?id=eq.home&select=featured_slugs`, {
     signal,
-    headers: { apikey: key, Authorization: `Bearer ${key}` },
+    headers: { apikey: key },
   })
   if (!response.ok)
     throw new Error('Não foi possível carregar a seleção de destaques. Tente novamente.')

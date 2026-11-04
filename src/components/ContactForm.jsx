@@ -40,12 +40,8 @@ export default function ContactForm() {
               ? 'Obrigado pela conversa. Recebi sua mensagem por e-mail e retorno assim que puder.'
               : 'Sua mensagem foi salva. A notificação por e-mail está pendente, mas já posso consultá-la no meu painel.'}
           </p>
-          <button
-            className="button button-outline"
-            type="button"
-            onClick={() => window.location.reload()}
-          >
-            Voltar ao portfólio
+          <button className="button button-outline" type="button" onClick={form.reset}>
+            Enviar outra mensagem
           </button>
         </div>
       ) : (

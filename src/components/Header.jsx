@@ -32,6 +32,14 @@ export default function Header() {
     return () => window.removeEventListener('scroll', updateActive)
   }, [pathname])
 
+  function isActive(id) {
+    if (pathname === '/') return active === id
+    return (
+      (id === 'projetos' && pathname.startsWith('/projetos')) ||
+      (id === 'contato' && pathname === '/contato')
+    )
+  }
+
   return (
     <header className="site-header">
       <div className="header-inner site-container">
@@ -63,10 +71,16 @@ export default function Header() {
           {navItems.map(({ id, label }) => (
             <Link
               key={id}
-              to={id === 'projetos' ? '/projetos' : `/#${id}`}
+              to={id === 'projetos' ? '/projetos' : id === 'contato' ? '/contato' : `/#${id}`}
               onClick={() => setOpen(false)}
-              className={pathname === '/' && active === id ? 'is-active' : ''}
-              aria-current={pathname === '/' && active === id ? 'location' : undefined}
+              className={isActive(id) ? 'is-active' : ''}
+              aria-current={
+                isActive(id)
+                  ? pathname === '/projetos' || pathname === '/contato'
+                    ? 'page'
+                    : 'location'
+                  : undefined
+              }
             >
               {label}
             </Link>
