@@ -21,6 +21,13 @@
     <title>Leonardo Barbosa — Engenharia de Software</title>
   </head>
   <body>
+    <script>
+      try {
+        document.documentElement.dataset.theme = localStorage.getItem('portfolio-theme') || 'light'
+      } catch {
+        document.documentElement.dataset.theme = 'light'
+      }
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

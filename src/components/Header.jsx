@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { usePreferences } from '../context/PreferencesContext.js'
 import { ArrowIcon, CloudMark } from './Icons.jsx'
 const navItems = [
   { id: 'inicio', label: 'Início' },
@@ -10,6 +11,7 @@ const navItems = [
 
 export default function Header() {
   const { pathname } = useLocation()
+  const { theme, toggleTheme, reading, toggleReading } = usePreferences()
   const [active, setActive] = useState('inicio')
   const [open, setOpen] = useState(false)
 
@@ -70,6 +72,33 @@ export default function Header() {
             </Link>
           ))}
         </nav>
+        <div className="visitor-controls">
+          <button className="reading-toggle" aria-pressed={reading} onClick={toggleReading}>
+            {reading ? 'Modo voo' : 'Modo leitura'}
+          </button>
+          <button
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label={theme === 'light' ? 'Ativar tema escuro' : 'Ativar tema claro'}
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              aria-hidden="true"
+            >
+              {theme === 'light' ? (
+                <path d="M20 15.2A8.5 8.5 0 0 1 8.8 4 8.5 8.5 0 1 0 20 15.2Z" />
+              ) : (
+                <>
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5" />
+                </>
+              )}
+            </svg>
+          </button>
+        </div>
         <Link className="header-cta" to="/contato">
           Vamos conversar <ArrowIcon diagonal />
         </Link>

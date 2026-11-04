@@ -60,6 +60,8 @@ export default function OrbitArt({ active = true }) {
             className="orbit-portrait portrait-front"
             src={current.src}
             alt={current.alt}
+            width="640"
+            height="800"
             loading="lazy"
             decoding="async"
           />
@@ -67,6 +69,8 @@ export default function OrbitArt({ active = true }) {
             className="orbit-portrait portrait-back"
             src={next.src}
             alt=""
+            width="640"
+            height="800"
             loading="lazy"
             decoding="async"
           />

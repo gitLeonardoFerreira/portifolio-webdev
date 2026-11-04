@@ -2,18 +2,19 @@ import Reveal from './Reveal.jsx'
 import ContactForm from './ContactForm.jsx'
 import { ArrowIcon } from './Icons.jsx'
 import { CONTACT_EMAIL } from '../../shared/contact.js'
-export default function ContactSection({ flight = false }) {
+export default function ContactSection({ flight = false, heading = 'h2' }) {
+  const Heading = heading
   return (
     <section id={flight ? undefined : 'contato'} className="contact-section section-anchor">
       <div className="site-container contact-grid">
         <Reveal className="contact-copy">
-          <h2>
+          <Heading>
             Uma boa ideia
             <br />
             começa com
             <br />
             <em>uma conversa.</em>
-          </h2>
+          </Heading>
           <p>
             Tem uma oportunidade de estágio ou um projeto para discutir? Me conte o que você está
             construindo.
