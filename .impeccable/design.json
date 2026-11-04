@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "source": "existing-portfolio",
+  "colors": {
+    "sky": "#c8ebff",
+    "ink": "#17344d",
+    "action": "#1856bc",
+    "paper": "#f6fcff",
+    "sun": "#ffe28a"
+  },
+  "typography": {
+    "display": "Barlow Condensed",
+    "body": "DM Sans",
+    "data": "IBM Plex Mono"
+  }
+}
