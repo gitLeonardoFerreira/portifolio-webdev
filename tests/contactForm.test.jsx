@@ -63,3 +63,14 @@ describe('formulário de contato', () => {
     )
   })
 })
+
+it('oferece novo formulário depois do sucesso', async () => {
+  vi.mocked(sendContact).mockResolvedValue({ saved: true, emailSent: true })
+  const user = userEvent.setup()
+  render(<ContactForm />)
+  await fill(user)
+  await user.click(screen.getByRole('button', { name: 'Enviar mensagem' }))
+  await user.click(await screen.findByRole('button', { name: 'Enviar outra mensagem' }))
+  expect(screen.getByLabelText('Seu nome')).toHaveValue('')
+  expect(screen.getByRole('button', { name: 'Enviar mensagem' })).toBeEnabled()
+})

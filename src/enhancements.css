@@ -783,3 +783,10 @@ h3 {
     font-size: 3.4rem;
   }
 }
+
+:root[data-theme='dark'] .hero-foot {
+  color: var(--muted);
+}
+.main-nav a {
+  transition: none;
+}
