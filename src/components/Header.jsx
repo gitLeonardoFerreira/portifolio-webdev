@@ -70,7 +70,7 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-        <Link className="header-cta" to="/#contato">
+        <Link className="header-cta" to="/contato">
           Vamos conversar <ArrowIcon diagonal />
         </Link>
       </div>
